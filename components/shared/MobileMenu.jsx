@@ -1,61 +1,61 @@
-'use client'
+"use client";
 
-import useScrollTo from '@/hooks/useScrollTo'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import useScrollTo from "@/hooks/useScrollTo";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-export default function MobileMenu({ onClick = () => {}}) {
-  const [isOpen, setIsOpen] = useState(false)
-  const ref = useRef(null)
+export default function MobileMenu({ onClick = () => {} }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef(null);
 
   // useEffect(() => {
   //   document.body.style.overflow = isOpen ? 'hidden' : 'auto'
   // }, [isOpen])
 
-  const { scrollToEl } = useScrollTo()
+  const { scrollToEl } = useScrollTo();
 
   const handleOnClick = (e) => {
-    scrollToEl(e)
-    window.setTimeout(() => tl.reverse(), 350)
-  }
+    scrollToEl(e);
+    window.setTimeout(() => tl.reverse(), 350);
+  };
 
   // gsap
-  let tl = gsap.timeline()
+  let tl = gsap.timeline();
   useGSAP(() => {
-    tl.to('#mobileMenu', {
+    tl.to("#mobileMenu", {
       right: 0,
       duration: 0.5,
-    })
+    });
 
-    tl.from('#mobileMenu ul li', {
+    tl.from("#mobileMenu ul li", {
       x: 150,
       duration: 0.3,
       stagger: 0.1,
       opacity: 0,
-    })
+    });
 
-    tl.from('#closeIcon', {
+    tl.from("#closeIcon", {
       opacity: 0,
-    })
+    });
 
-    tl.pause()
-  })
+    tl.pause();
+  });
 
   const open = () => {
-    tl.play()
-  }
+    tl.play();
+  };
   const close = () => {
-    tl.reverse()
-  }
+    tl.reverse();
+  };
 
   const MenuItems = [
-    {id: "1", name: "Home", url: "#home"},
-    {id: "2", name: "About", url: "#about"},
-    {id: "3", name: "Skills", url: "#skills"},
-    {id: "4", name: "Portfolio", url: "#portfolio"},
-]
+    { id: "1", name: "Tekla Structure", url: "/" },
+    { id: "2", name: "AutoCAD", url: "autocad" },
+    { id: "3", name: "Rvit (BIM & MEP)", url: "revit" },
+    { id: "4", name: "Site Visit", url: "site" },
+  ];
 
   return (
     <>
@@ -74,7 +74,8 @@ export default function MobileMenu({ onClick = () => {}}) {
         <div
           id="mobileMenu"
           ref={ref}
-          className="backdrop-blur-md bg-white/30 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50 ">
+          className="backdrop-blur-md bg-white/30 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50 "
+        >
           <Image
             id="closeIcon"
             className="size-7 absolute top-4 right-5 cursor-pointer"
@@ -90,14 +91,16 @@ export default function MobileMenu({ onClick = () => {}}) {
             {/* <Menu onClick={() => setIsOpen(false)} /> */}
             <ul
               id="menu"
-              className="flex flex-col justify-center items-start gap-5 md:flex-row md:items-center uppercase">
+              className="flex flex-col justify-center items-start gap-5 md:flex-row md:items-center uppercase"
+            >
               {MenuItems?.map((menuItem) => (
                 <li key={menuItem?.id}>
                   <a
                     href={menuItem.url}
                     title={menuItem.name}
                     onClick={handleOnClick}
-                    className="relative text-base text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                    className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                  >
                     {menuItem?.name}
                   </a>
                 </li>
@@ -107,5 +110,5 @@ export default function MobileMenu({ onClick = () => {}}) {
         </div>
       )}
     </>
-  )
+  );
 }

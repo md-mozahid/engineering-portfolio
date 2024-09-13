@@ -4,6 +4,7 @@
 import useScrollTo from "@/hooks/useScrollTo";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Menu({ onClick = () => {} }) {
@@ -26,10 +27,10 @@ export default function Menu({ onClick = () => {} }) {
   });
 
   const MenuItems = [
-    {id: "1", name: "Home", url: "#home"},
-    {id: "2", name: "About", url: "#about"},
-    {id: "3", name: "Skills", url: "#skills"},
-    {id: "4", name: "Portfolio", url: "#portfolio"},
+    {id: "1", name: "Tekla Structure", url: "/"},
+    {id: "2", name: "AutoCAD", url: "autocad"},
+    {id: "3", name: "Rvit (BIM & MEP)", url: "revit"},
+    {id: "4", name: "Site Visit", url: "site"},
 ]
 
   return (
@@ -42,14 +43,13 @@ export default function Menu({ onClick = () => {} }) {
         >
           {MenuItems?.map((menuItem) => (
             <li key={menuItem?.id}>
-              <a
+              <Link
                 href={menuItem.url}
                 title={menuItem.name}
-                onClick={handleOnClick}
-                className="relative text-base text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
               >
                 {menuItem?.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
