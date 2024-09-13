@@ -27,10 +27,10 @@ export default function Menu({ onClick = () => {} }) {
   });
 
   const MenuItems = [
-    {id: "1", name: "Tekla Structure", url: "/"},
-    {id: "2", name: "AutoCAD", url: "autocad"},
-    {id: "3", name: "Rvit (BIM & MEP)", url: "revit"},
-    {id: "4", name: "Site Visit", url: "site"},
+    {id: "1", name: "Tekla Structure", url: "/projects"},
+    {id: "2", name: "AutoCAD", url: "/autocad"},
+    {id: "3", name: "Rvit (BIM & MEP)", url: "/revit"},
+    {id: "4", name: "Site Visit", url: "/site"},
 ]
 
   return (

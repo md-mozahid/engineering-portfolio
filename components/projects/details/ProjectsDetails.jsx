@@ -5,14 +5,15 @@ export default async function ProjectDetails({ project }) {
   console.log(project);
   return (
     <>
-      <div className="container grid grid-cols-2 gap-6">
+      <div className="container grid grid-cols-2 mt-10 gap-6">
         <ImageSection project={project} />
 
-        <div className="font-semibold">
-          <h2 className="uppercase mb-2 ">
-            Project Name: <span className="text-rose-500 text-xl">{project.title}</span>
+        <div className="font-semibold uppercase">
+          <h2 className="mb-2 text-lg">
+            Project Name:{" "}
+            <span className="text-rose-500 text-xl">{project.title}</span>
           </h2>
-          <h2 className="uppercase mb-2">
+          <h2 className="mb-2 text-lg">
             Client Name:{" "}
             <span className="text-rose-500 text-xl">{project?.client}</span>
           </h2>

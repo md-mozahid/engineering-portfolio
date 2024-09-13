@@ -39,9 +39,9 @@ export default function Navbar() {
               <h3
                 ref={logoRef}
                 title="home"
-                className="text-xl md:text-2xl font-semibold text-dark dark:text-white"
+                className="text-xl md:text-2xl font-semibold text-dark dark:text-white italic"
               >
-                @Mozahid
+                @MOZAHID
               </h3>
             </Link>
             {isMobile ? <MobileMenu /> : <Menu />}

@@ -11,7 +11,6 @@ export default function ImageSection({ project }) {
   return (
     <div>
       <Image
-        // src={project?.thumbnail}
         src={`${thumbnail ? thumbnail : project?.thumbnail}`}
         alt={project?.title}
         className="w-full"
