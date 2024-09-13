@@ -1,9 +1,10 @@
+import SiteImages from "@/components/site/SiteImages";
 import React from "react";
 
 export default function SiteVisit() {
   return (
-    <div className="flex items-center justify-center">
-      Site picture upload soon...
-    </div>
+    <main className="container">
+      <SiteImages />
+    </main>
   );
 }
