@@ -51,10 +51,10 @@ export default function MobileMenu({ onClick = () => {} }) {
   };
 
   const MenuItems = [
-    { id: "1", name: "Tekla Structure", url: "/" },
-    { id: "2", name: "AutoCAD", url: "autocad" },
-    { id: "3", name: "Rvit (BIM & MEP)", url: "revit" },
-    { id: "4", name: "Site Visit", url: "site" },
+    { id: "1", name: "Tekla Structure", url: "/projects" },
+    { id: "2", name: "AutoCAD", url: "/autocad" },
+    { id: "3", name: "Rvit (BIM & MEP)", url: "/revit" },
+    { id: "4", name: "Site Visit", url: "/site" },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function MobileMenu({ onClick = () => {} }) {
         <div
           id="mobileMenu"
           ref={ref}
-          className="backdrop-blur-md bg-white/30 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50 "
+          className="backdrop-blur-md bg-white/30 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50"
         >
           <Image
             id="closeIcon"
@@ -99,7 +99,7 @@ export default function MobileMenu({ onClick = () => {} }) {
                     href={menuItem.url}
                     title={menuItem.name}
                     onClick={handleOnClick}
-                    className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                    className="relative z-30 text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
                   >
                     {menuItem?.name}
                   </a>

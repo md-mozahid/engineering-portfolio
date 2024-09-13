@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         <ThemeContext>
           <Navbar />
           <Suspense fallback={<Loading />}>{children}</Suspense>
+          <div id="modal-root-content" />
           <ScrollTop />
           <div id="modal-root-content" />
           {/* <Footer /> */}

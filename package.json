@@ -11,6 +11,7 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
     "@gsap/react": "^2.1.1",
+    "@headlessui/react": "^2.1.8",
     "@remixicon/react": "^4.2.0",
     "framer-motion": "^11.2.14",
     "negotiator": "^0.6.3",

@@ -3,14 +3,30 @@
 import { getSiteVisitPicture } from "@/database/dbSite";
 import { Fade } from "react-reveal";
 import Image from "next/image";
+import SiteModal from "./SiteModal";
+import { useState } from "react";
 
 export default function SiteImages() {
   const siteImages = getSiteVisitPicture();
-  console.log(siteImages);
+
+  let [isOpen, setIsOpen] = useState(false);
+
+  function open() {
+    setIsOpen(true);
+  }
+
+  function close() {
+    setIsOpen(false);
+  }
+
+  const [thumbnail, setThumbnail] = useState(null);
+  const handleImage = (img) => {
+    setThumbnail(img);
+  };
   return (
     <>
       <div className="flex flex-col items-center justify-center mt-5">
-        <div className="grid md:grid-cols-5 items-center justify-center gap-5">
+        <div className="grid md:grid-cols-5 items-center justify-center gap-5" onClick={open}>
           {siteImages?.map((img, i) => (
             <Fade
               key={i}
@@ -18,8 +34,9 @@ export default function SiteImages() {
               up={i % 3 === 0}
               right={i % 5 === 0}
             >
-              <Image
-                className="rounded-xl w-full object-cover object-center mb-6"
+              <Image   
+                onClick={() => handleImage(img)}
+                className="rounded-xl w-full object-cover object-center mb-6 cursor-pointer"
                 src={img}
                 alt="image"
                 width={500}
@@ -29,6 +46,7 @@ export default function SiteImages() {
           ))}
         </div>
       </div>
+      <SiteModal open={open} isOpen={isOpen} close={close} thumbnail={thumbnail} />
     </>
   );
 }
