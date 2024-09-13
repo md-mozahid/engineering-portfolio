@@ -4,7 +4,7 @@ import { getSingleProject } from "@/database/db";
 
 export default function ProjectIntercept({ params: { projectId } }) {
   const singleProject = getSingleProject(projectId);
-  console.log('intercept', singleProject)
+
   return (
     <Modal>
       <div>

@@ -22,7 +22,7 @@ export default function Modal({ children }) {
     <dialog
       ref={modalRef}
       onClose={onHide}
-      className="w-[70%] mx-auto shadow-teal-700 shadow-md flex flex-col p-2 rounded-md bg-gradient-to-r from-cyan-400 to-blue-400"
+      className="md:w-[70%] max-w-sm mx-auto shadow-teal-500 shadow-md flex flex-col p-2 rounded-md bg-gradient-to-r from-cyan-400 to-blue-400"
     >
       <span onClick={onHide} className="flex justify-end cursor-pointer ">
         <MdClose title="close" className="size-8 bg-red-500 p-1 rounded-full text-white hover:bg-gray-500" />

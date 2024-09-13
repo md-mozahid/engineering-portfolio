@@ -9,18 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.4",
     "@gsap/react": "^2.1.1",
     "@headlessui/react": "^2.1.8",
-    "@remixicon/react": "^4.2.0",
-    "framer-motion": "^11.2.14",
-    "negotiator": "^0.6.3",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
-    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-floating-whatsapp": "^5.0.8",
     "react-icons": "^5.2.1",
     "react-reveal": "^1.2.2"
   },

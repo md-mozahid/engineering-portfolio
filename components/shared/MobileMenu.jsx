@@ -1,26 +1,13 @@
 "use client";
 
-import useScrollTo from "@/hooks/useScrollTo";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useRef } from "react";
 
-export default function MobileMenu({ onClick = () => {} }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function MobileMenu() {
   const ref = useRef(null);
-
-  // useEffect(() => {
-  //   document.body.style.overflow = isOpen ? 'hidden' : 'auto'
-  // }, [isOpen])
-
-  const { scrollToEl } = useScrollTo();
-
-  const handleOnClick = (e) => {
-    scrollToEl(e);
-    window.setTimeout(() => tl.reverse(), 350);
-  };
-
   // gsap
   let tl = gsap.timeline();
   useGSAP(() => {
@@ -51,7 +38,7 @@ export default function MobileMenu({ onClick = () => {} }) {
   };
 
   const MenuItems = [
-    { id: "1", name: "Tekla Structure", url: "/projects" },
+    { id: "1", name: "Tekla", url: "/projects" },
     { id: "2", name: "AutoCAD", url: "/autocad" },
     { id: "3", name: "Rvit (BIM & MEP)", url: "/revit" },
     { id: "4", name: "Site Visit", url: "/site" },
@@ -65,7 +52,6 @@ export default function MobileMenu({ onClick = () => {} }) {
         alt="align"
         width={100}
         height={100}
-        // onClick={() => setIsOpen(true)}
         onClick={open}
         title="Open menu"
       />
@@ -88,21 +74,19 @@ export default function MobileMenu({ onClick = () => {} }) {
             onClick={close}
           />
           <div className="px-6 py-10">
-            {/* <Menu onClick={() => setIsOpen(false)} /> */}
             <ul
               id="menu"
               className="flex flex-col justify-center items-start gap-5 md:flex-row md:items-center uppercase"
             >
               {MenuItems?.map((menuItem) => (
                 <li key={menuItem?.id}>
-                  <a
+                  <Link
                     href={menuItem.url}
                     title={menuItem.name}
-                    onClick={handleOnClick}
-                    className="relative z-30 text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                    className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
                   >
                     {menuItem?.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -16,8 +16,6 @@ export default function ImageSection({ project }) {
         className="w-full"
         width={900}
         height={900}
-        // placeholder="blur"
-        // blurDataURL={base64}
       />
 
       <div className="grid grid-cols-5 gap-4 mt-4">
