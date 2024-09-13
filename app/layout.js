@@ -5,6 +5,7 @@ import Navbar from "@/components/shared/Navbar";
 import { Suspense } from "react";
 import Loading from "./loading";
 import ScrollTop from "@/components/shared/ScrollTop";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Suspense fallback={<Loading />}>{children}</Suspense>
           <div id="modal-root-content" />
+          <SpeedInsights />
           <ScrollTop />
         </ThemeContext>
       </body>
