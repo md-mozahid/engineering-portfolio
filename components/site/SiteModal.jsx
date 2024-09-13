@@ -15,10 +15,10 @@ export default function SiteModal({ close, isOpen, thumbnail }) {
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
-              className="w-full max-w-md md:max-w-xl rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="w-full max-w-md md:max-w-xl rounded-xl bg-white/5 p-4 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <Image
-                className="rounded-xl w-full object-cover object-center mb-6 cursor-pointer"
+                className="rounded-xl w-full object-cover object-center cursor-pointer"
                 src={thumbnail}
                 alt="image"
                 width={500}

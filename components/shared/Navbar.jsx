@@ -8,6 +8,7 @@ import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Link from "next/link";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Navbar() {
   const isMobile = useMediaQuery();
@@ -41,11 +42,23 @@ export default function Navbar() {
                 title="home"
                 className="text-xl md:text-2xl font-semibold  italic"
               >
-                @<span className="dark:text-pink-500 text-rose-500">MOZAHID</span>
+                @
+                <span className="dark:text-pink-500 text-rose-500">
+                  MOZAHID
+                </span>
               </h3>
             </Link>
             {isMobile ? <MobileMenu /> : <Menu />}
             <div ref={ref} className="flex-center gap-5">
+              <Link
+                href="https://www.linkedin.com/in/md-mozahid-3034b3109/"
+                target="_blank"
+                title="linkedIn"
+              >
+                <span className="bg-slate-400 dark:text-white size-8 p-2 text-center flex items-center justify-center rounded-full font-semibold cursor-pointer hover:bg-sky-500 transition-all hover:text-white dark:hover:text-white">
+                  <FaLinkedinIn />
+                </span>
+              </Link>
               <ThemeSwitcher />
             </div>
           </div>

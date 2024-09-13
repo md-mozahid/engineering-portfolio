@@ -36,7 +36,8 @@ export default function SiteImages() {
             >
               <Image   
                 onClick={() => handleImage(img)}
-                className="rounded-xl w-full object-cover object-center mb-6 cursor-pointer"
+                className="rounded-md w-full object-cover object-center cursor-pointer"
+                title="preview"
                 src={img}
                 alt="image"
                 width={500}

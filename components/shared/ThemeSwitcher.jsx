@@ -21,16 +21,17 @@ export default function ThemeSwitcher() {
         <Image
           className="w-6 cursor-pointer sun text-dark dark:text-white"
           src={`${
-            currentTheme === 'dark'
-              ? '/assets/svg/sun.svg'
-              : '/assets/svg/moon.svg'
+            currentTheme === "dark"
+              ? "/assets/svg/sun.svg"
+              : "/assets/svg/moon.svg"
           }`}
           alt="user-icon"
           width={100}
           height={100}
-          onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
+          onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+          title={currentTheme === "dark" ? "light mode" : "dark mode"}
         />
       </div>
     </>
-  )
+  );
 }
