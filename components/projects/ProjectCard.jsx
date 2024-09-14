@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
       <Image
         src={project?.thumbnail}
         alt={project?.title}
-        className="w-full"
+        className="w-full rounded-lg object-cover object-center"
         width={500}
         height={500}
       />
