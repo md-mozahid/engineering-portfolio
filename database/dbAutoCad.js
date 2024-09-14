@@ -11,14 +11,14 @@ const cadDrawing = [
     title: "Warehouse Building",
     thumbnail: "https://i.postimg.cc/wvrpvmjw/Warehouse-Building.png",
     pdfLink:
-      "https://drive.google.com/file/d/1tbVnGrY-ZIfnx4s_hjsaqAmoEzaKs0Ke/view?usp=drive_link",
+      "https://drive.google.com/file/d/1GZMwpKxa81-6W5x_rpvyfHS909w3aUa2/view?usp=drive_link",
   },
   {
     id: 3,
     title: "Chemical Godown Building",
     thumbnail: "https://i.postimg.cc/SsCBytHx/03-Chemical-Godown.png",
     pdfLink:
-      "https://drive.google.com/file/d/1MTt7RarmhS_MGyom4dVQJLGLVR9FnhL7/view?usp=drive_link",
+      "https://drive.google.com/file/d/1fa3VwN5yVbQFWh6elosGOeME_RuI3hFP/view?usp=drive_link",
   },
 ];
 
