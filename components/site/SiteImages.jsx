@@ -26,7 +26,7 @@ export default function SiteImages() {
   return (
     <>
       <div className="flex flex-col items-center justify-center mt-5">
-        <div className="grid md:grid-cols-5 items-center justify-center gap-5" onClick={open}>
+        <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-3 md:gap-5" onClick={open}>
           {siteImages?.map((img, i) => (
             <Fade
               key={i}
