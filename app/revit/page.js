@@ -1,9 +1,9 @@
-import React from "react";
+import RevitProjects from "@/components/revitProjects/RevitProjects";
 
-export default function Revit() {
+export default function RevitPage() {
   return (
-    <div className="flex items-center justify-center">
-      Revit Project upload soon...
-    </div>
+    <>
+      <RevitProjects />
+    </>
   );
 }

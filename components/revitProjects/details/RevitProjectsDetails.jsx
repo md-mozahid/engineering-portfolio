@@ -20,12 +20,6 @@ export default async function ProjectDetails({ project }) {
               <span className="text-dark dark:text-white">Location:</span>
               <span className=" text-rose-500">{project?.location}</span>
             </p>
-            {project?.weight && (
-              <p className="space-x-2">
-                <span className="text-dark dark:text-white">Volume:</span>
-                <span className="text-rose-500">{project?.weight} MT</span>
-              </p>
-            )}
 
             <p className="space-x-2">
               <span className="text-dark dark:text-white">Area:</span>

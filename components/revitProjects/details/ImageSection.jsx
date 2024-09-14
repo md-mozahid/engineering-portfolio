@@ -18,7 +18,7 @@ export default function ImageSection({ project }) {
         height={900}
       />
 
-      <div className="grid grid-cols-5 gap-4 mt-4">
+      <div className="grid grid-cols-5 gap-4 mt-4 rounded-md">
         {project?.images &&
           project?.images?.map((img) => (
             <Image
