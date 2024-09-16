@@ -35,7 +35,7 @@ export default function Menu() {
             <Link
               href={menuItem.url}
               title={menuItem.name}
-              className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+              className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-rose-300 after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
             >
               {menuItem?.name}
             </Link>

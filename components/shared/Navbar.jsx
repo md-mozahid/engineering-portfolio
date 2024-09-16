@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full z-10 py-5 shadow-sm bg-inherit backdrop-blur-sm h-[75px] ">
+      <nav className="w-full fixed z-50 py-5 top-0 shadow-sm bg-inherit backdrop-blur-sm h-[75px] ">
         <div className="container">
           <div className="flex items-center justify-between gap-3">
             <Link href="/">
@@ -55,7 +55,7 @@ export default function Navbar() {
                 target="_blank"
                 title="linkedIn"
               >
-                <span className="bg-slate-400 dark:text-white size-8 p-2 text-center flex items-center justify-center rounded-full font-semibold cursor-pointer hover:bg-sky-500 transition-all hover:text-white dark:hover:text-white">
+                <span className="size-8 text-center flex items-center justify-center rounded-full font-semibold cursor-pointer hover:text-rose-500 transition-all ">
                   <FaLinkedinIn />
                 </span>
               </Link>

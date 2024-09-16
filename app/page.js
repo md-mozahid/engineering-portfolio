@@ -9,7 +9,7 @@ import { Fade } from "react-reveal";
 export default function Home() {
   const projects = getProjects();
   return (
-    <div className="container flex flex-col items-center justify-center pt-10">
+    <div className="container flex flex-col items-center justify-center pt-24">
       <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-12 italic">
         Some of my completed Project
       </h2>

@@ -2,9 +2,9 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { AiOutlineAlignCenter, AiOutlineClose } from "react-icons/ai";
 
 export default function MobileMenu() {
   const ref = useRef(null);
@@ -46,32 +46,18 @@ export default function MobileMenu() {
 
   return (
     <>
-      <Image
-        className="size-7 align-icon"
-        src="/assets/svg/align-center.svg"
-        alt="align"
-        width={100}
-        height={100}
-        onClick={open}
-        title="Open menu"
-      />
+      <AiOutlineAlignCenter className="size-6 align-icon" onClick={open} />
 
       {tl.play() && (
         <div
           id="mobileMenu"
           ref={ref}
-          className="backdrop-blur-md bg-white/30 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50"
+          className="backdrop-blur-md bg-white/20 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50"
         >
-          <Image
+          <AiOutlineClose
             id="closeIcon"
-            className="size-7 absolute top-4 right-5 cursor-pointer"
-            src="/assets/svg/x.svg"
-            alt="x mark"
-            title="close"
-            width={100}
-            height={100}
-            // onClick={() => setIsOpen(false)}
             onClick={close}
+            className="size-7 absolute top-4 right-5 cursor-pointer text-rose-500"
           />
           <div className="px-6 py-10">
             <ul
@@ -83,7 +69,7 @@ export default function MobileMenu() {
                   <Link
                     href={menuItem.url}
                     title={menuItem.name}
-                    className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-current after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                    className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-rose-300 after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
                   >
                     {menuItem?.name}
                   </Link>
