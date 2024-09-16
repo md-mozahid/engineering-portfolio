@@ -7,8 +7,11 @@ export default function AutoCAD() {
   // console.log(cadDrawings)
 
   return (
-    <div className="container py-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-5 mb-5">
+    <div className="container py-24">
+      <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-10">
+        AutoCAD Projects
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">
         {cadDrawings?.map((pdf, i) => (
           <div key={i} className="relative rounded-lg group h-[277px]">
             <Image

@@ -9,11 +9,11 @@ import { Fade } from "react-reveal";
 export default function Home() {
   const projects = getProjects();
   return (
-    <div className="container flex flex-col items-center justify-center pt-24">
-      <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-12 italic">
-        Some of my completed Project
+    <div className="container flex flex-col items-center justify-center pb-10 pt-24">
+      <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-10">
+        Steel Structure Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-5 mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center mb-5">
         {projects?.slice(0, 6).map((project) => (
           <Fade key={project?.id} left={project?.id === 1 || project?.id === 4} down={project?.id  === 2}  up={project?.id  === 5} right={project?.id  === 3  || project?.id === 6}>
             <ProjectCard key={project?.id} project={project} />
