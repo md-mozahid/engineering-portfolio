@@ -118,7 +118,8 @@ const projectList = [
     title: "BBT BRIDGE",
     client: "S.Alam Group",
     location: "Chottogram, Bangladesh",
-    weight: 58,
+    weight: "58",
+    area: "N/A",
     status: "Completed",
     thumbnail: "https://i.ibb.co.com/7z5Z7QZ/1.png",
     images: [
@@ -197,7 +198,7 @@ const projectList = [
   },
   {
     id: 13,
-    title: "DBOX Sports Complex",
+    title: "Two Storied Shed Building",
     client: "DBOX Sports Complex",
     location: "Dhaka, Bangladesh",
     weight: "57.6",
