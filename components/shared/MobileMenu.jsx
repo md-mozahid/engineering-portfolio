@@ -52,7 +52,7 @@ export default function MobileMenu() {
         <div
           id="mobileMenu"
           ref={ref}
-          className="backdrop-blur-md bg-white/20 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50"
+          className="backdrop-blur-md bg-slate-700 absolute -right-[60%] w-[60%] top-0 min-h-screen z-50"
         >
           <AiOutlineClose
             id="closeIcon"
@@ -69,7 +69,7 @@ export default function MobileMenu() {
                   <Link
                     href={menuItem.url}
                     title={menuItem.name}
-                    className="relative text-base font-semibold text-dark dark:text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-rose-300 after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
+                    className="relative text-base font-semibold text-white hover:no-underline after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:w-0 after:bg-rose-300 after:transition-width after:duration-300 after:ease-in-out hover:after:w-full"
                   >
                     {menuItem?.name}
                   </Link>

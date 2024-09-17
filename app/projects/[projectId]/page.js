@@ -1,4 +1,4 @@
-import ProjectsDetails from "@/components/projects/details/ProjectsDetails";
+import ProjectsDetails from "@/app/projects/details/ProjectsDetails";
 import { getSingleProject } from "@/database/db";
 import { notFound } from "next/navigation";
 

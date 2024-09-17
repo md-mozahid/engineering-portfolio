@@ -1,4 +1,4 @@
-import SiteImages from "@/components/site/SiteImages";
+import SiteImages from "@/app/site/components/SiteImages";
 
 export default function SiteVisit() {
   return (

@@ -11,9 +11,9 @@ export default function AutoCAD() {
       <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-10">
         AutoCAD Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-3 md:gap-5">
         {cadDrawings?.map((pdf, i) => (
-          <div key={i} className="relative rounded-lg group h-[277px]">
+          <div key={i} className="relative rounded-lg group h-[250px] md:h-[277px]">
             <Image
               src={pdf?.thumbnail}
               alt={pdf?.title}

@@ -1,5 +1,5 @@
 import Modal from "@/components/modal/Modal";
-import RevitProjectsDetails from "@/components/revitProjects/details/RevitProjectsDetails";
+import RevitProjectsDetails from "@/app/revit/details/RevitProjectsDetails";
 import { getSingleRevitProject } from "@/database/dbRevit";
 import { notFound } from "next/navigation";
 

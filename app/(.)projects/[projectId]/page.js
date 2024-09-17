@@ -1,5 +1,5 @@
 import Modal from "@/components/modal/Modal";
-import ProjectsDetails from "@/components/projects/details/ProjectsDetails";
+import ProjectsDetails from "@/app/projects/details/ProjectsDetails";
 import { getSingleProject } from "@/database/db";
 
 export default function ProjectIntercept({ params: { projectId } }) {

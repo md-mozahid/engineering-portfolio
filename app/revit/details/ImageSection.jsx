@@ -18,7 +18,7 @@ export default function ImageSection({ project }) {
         height={900}
       />
 
-      <div className="grid grid-cols-5 gap-4 mt-4">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 mt-4 rounded-md">
         {project?.images &&
           project?.images?.map((img) => (
             <Image
@@ -26,7 +26,7 @@ export default function ImageSection({ project }) {
               src={img}
               width={100}
               height={100}
-              className="w-24 h-16 rounded-sm md:rounded-md cursor-pointer border border-primary"
+              className="w-24 h-16 rounded-md cursor-pointer border border-primary"
               alt="product image"
               onClick={() => handleImage(img)}
             />
