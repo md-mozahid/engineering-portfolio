@@ -40,8 +40,9 @@ export default function MobileMenu() {
   const MenuItems = [
     { id: "1", name: "Tekla", url: "/projects" },
     { id: "2", name: "AutoCAD", url: "/autocad" },
-    { id: "3", name: "Rvit (BIM & MEP)", url: "/revit" },
-    { id: "4", name: "Site Visit", url: "/site" },
+    { id: "3", name: "Rvit", url: "/revit" },
+    { id: "4", name: "Project Visit", url: "/site" },
+    { id: "5", name: "About", url: "/about" },
   ];
 
   return (
