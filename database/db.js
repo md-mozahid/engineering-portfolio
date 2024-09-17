@@ -204,7 +204,7 @@ const projectList = [
     weight: "57.6",
     area: "11,400",
     status: "Completed",
-    thumbnail: "https://i.postimg.cc/8zWtQfRv/1.png",
+    thumbnail: "https://i.postimg.cc/VNWg5yHL/2.png",
     images: [
       "https://i.postimg.cc/8zWtQfRv/1.png",
       "https://i.postimg.cc/VNWg5yHL/2.png",

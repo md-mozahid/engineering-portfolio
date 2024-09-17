@@ -9,7 +9,7 @@ export default function Projects() {
   const projects = getProjects();
   return (
     <div className="container pt-24">
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-3 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-10 md:gap-5">
         {projects?.map((project, i) => (
           <Fade key={i} left={i % 2 === 0} up={i % 3 === 0} right={i % 5 === 0}>
             <div className="relative rounded-lg group h-[200px] md:h-[250px]">

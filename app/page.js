@@ -13,7 +13,7 @@ export default function Home() {
       <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-10">
         Steel Structure Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-3 md:gap-5 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-10 md:gap-5 mb-10">
         {projects?.slice(0, 6).map((project) => (
           <Fade
             key={project?.id}
