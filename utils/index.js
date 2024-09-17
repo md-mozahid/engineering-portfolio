@@ -1,2 +1,2 @@
-export const navigationHeight = 90
+export const navigationHeight = 50
 export * from './motions'

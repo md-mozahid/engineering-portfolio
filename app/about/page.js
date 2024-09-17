@@ -27,7 +27,7 @@ export default function About() {
   };
   return (
     <div className="container pt-24">
-      <h2 className="text-3xl uppercase pb-5">About Me:</h2>
+      <h2 className="text-xl md:text-3xl uppercase pb-5">About Me:</h2>
       <div className="grid md:grid-cols-3 gap-3 md:gap-5">
         <Fade left>
           <Image
