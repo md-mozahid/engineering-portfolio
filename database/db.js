@@ -55,7 +55,7 @@ const projectList = [
     client: "Akij Group",
     location: "Gazipur, Bangladesh",
     weight: "665",
-    area: "6230",
+    area: "67,050",
     status: "Completed",
     thumbnail: "https://i.postimg.cc/ZKsTtKsj/AKIS1.png",
     images: [
