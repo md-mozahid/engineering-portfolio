@@ -5,9 +5,20 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { Fade } from "react-reveal";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import AppWrapper from "@/components/hoc/AppWrapper";
+import PopUpMessage from "@/components/shared/PopUpMessage";
 
-export default function Home() {
+const  Home = () =>{
+  const [showPopup, setShowPopup] = useState(false);
   const projects = getProjects();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowPopup(true);
+    }, 2000);
+  }, []);
+
   return (
     <div className="container flex flex-col items-center justify-center pb-10 pt-24">
       <h2 className="md:text-2xl text-lg font-medium text-center text-dark dark:text-white uppercase mb-10">
@@ -43,7 +54,7 @@ export default function Home() {
           </Fade>
         ))}
       </div>
-
+      {showPopup && <PopUpMessage setShowPopup={setShowPopup} />}
       <div className="text-center md:mt-10">
         <Link href="/projects">
           <button className="btn bg-gradient-to-r from-sky-500 to-indigo-500 flex-center gap-2 hover:px-12 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all hover:text-white">
@@ -54,3 +65,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default AppWrapper(Home, "home");
