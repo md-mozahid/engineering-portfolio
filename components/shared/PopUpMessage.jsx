@@ -43,7 +43,7 @@ export default function PopUpMessage({ setShowPopup }) {
         </div>
 
         <Link
-          href="https://www.linkedin.com/in/md-mozahid-3034b3109/"
+          href="https://www.linkedin.com/in/mozahid96/"
           target="_blank"
         >
           <div
